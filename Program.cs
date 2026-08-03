@@ -28,6 +28,9 @@ namespace Fabrica
             Console.WriteLine("\n14 - Relatórios");
             
             Console.WriteLine("\n0 - Sair");
+            int menuOpcao = int.Parse(Console.ReadLine() ?? "");
+
+            
         }
     }
 }
