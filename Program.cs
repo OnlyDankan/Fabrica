@@ -10,6 +10,9 @@ namespace Fabrica
     {
         static void Main(string[] args)
         {
+
+            FabricaService fabricaService = new FabricaService();
+
             Console.WriteLine("=== FABRICA ===");
 
             Console.WriteLine("1 - Cadastrar produto");
@@ -40,7 +43,7 @@ namespace Fabrica
             switch (menuOpcao)
             {
                 case 1:
-                    FabricaService.CadastrarProduto();
+                    fabricaService.CadastrarProduto();
                 break;
             }
  
