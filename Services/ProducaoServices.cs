@@ -48,6 +48,13 @@ namespace Fabrica.Services
                     {
                         throw new ArgumentException("Número não válido");
                     }
+
+                    Produto produto = new Produto();
+
+                    produto.Nome = nome;
+                    produto.ID = id;
+
+                    produtos.Add(produto);
                     
                 } catch
                 {
