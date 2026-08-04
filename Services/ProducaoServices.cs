@@ -55,10 +55,17 @@ namespace Fabrica.Services
                     produto.ID = id;
 
                     produtos.Add(produto);
-                    
-                } catch
+
+                    Console.WriteLine("Produto cadastrado.");
+                    break;
+
+                } catch (ArgumentException ex)
                 {
-                    
+                    Console.WriteLine(ex.Message);
+
+                } catch (FormatException)
+                {
+                    Console.WriteLine("Digite um valor válido.");
                 }
             }
         }
