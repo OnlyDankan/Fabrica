@@ -22,6 +22,12 @@ namespace Fabrica.Services
                     Console.WriteLine("Cadastro de produto");
                     Console.Write("Nome: ");
                     string nome = Console.ReadLine() ?? "";
+                    Produto? produtoEncontrado = produtos.FirstOrDefault(f => f.Nome == nome);
+
+                    if (produtoEncontrado != null)
+                    {
+                        throw new ArgumentException("Este nome já existe. Tente novamente.");
+                    }
 
                     if (string.IsNullOrWhiteSpace(nome))
                     {
