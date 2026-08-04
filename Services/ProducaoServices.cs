@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq;
 using System.Data;
+using Fabrica.Models;
+
 
 
 namespace Fabrica.Services
 {
     public class FabricaService
     {
-        private List<> fabricas = new List<>();
+        private List<Produto> produtos = new List<Produto>(); //ajustar mais tarde essa list
 
         public void CadastrarProduto()
         {

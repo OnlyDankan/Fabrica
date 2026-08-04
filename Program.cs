@@ -2,6 +2,7 @@
 using Fabrica.Services;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
 
 namespace Fabrica
 {
@@ -31,15 +32,18 @@ namespace Fabrica
             Console.WriteLine("\n14 - Relatórios");
             
             Console.WriteLine("\n0 - Sair");
+            Console.WriteLine("Escolha uma opção: ");
             int menuOpcao = int.Parse(Console.ReadLine() ?? "");
+
+            Console.Clear();
 
             switch (menuOpcao)
             {
                 case 1:
-                    CadastrarProduto();
+                    FabricaService.CadastrarProduto();
                 break;
             }
-
+ 
             
         }
     }
