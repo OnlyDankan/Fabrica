@@ -19,7 +19,7 @@ namespace Fabrica.Services
             {
                 try
                 {
-                    Console.WriteLine("Cadastro de produto");
+                    Console.Write("Cadastro de produto");
                     Console.Write("Nome: ");
                     string nome = Console.ReadLine() ?? "";
                     Produto? produtoEncontrado = produtos.FirstOrDefault(f => f.Nome == nome);
@@ -32,6 +32,21 @@ namespace Fabrica.Services
                     if (string.IsNullOrWhiteSpace(nome))
                     {
                         throw new ArgumentException("O campo não pode ser vazio. Tente novamente");
+                    }
+
+
+                    Console.Write("ID: ");
+                    int id = int.Parse(Console.ReadLine() ?? "");
+                    Produto? produtoEncontrados = produtos.FirstOrDefault(f => f.ID == id);
+
+                    if (produtoEncontrados != null)
+                    {
+                        throw new ArgumentException("Este ID já existe. Tente novamente");
+                    }
+
+                    if (int.IsNegative(id))
+                    {
+                        throw new ArgumentException("Número não válido");
                     }
                     
                 } catch
