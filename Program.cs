@@ -13,6 +13,10 @@ namespace Fabrica
 
             FabricaService fabricaService = new FabricaService();
 
+            bool executando = true;
+
+            while (executando) {
+
             Console.WriteLine("=== FABRICA ===");
 
             Console.WriteLine("1 - Cadastrar produto");
@@ -46,8 +50,15 @@ namespace Fabrica
                     fabricaService.CadastrarProduto();
                 break;
             }
- 
-            
+
+            if (executando)
+                {
+                    Console.WriteLine("Precione qualquer tecla para voltar ao menu...");
+                    Console.ReadKey();
+                }
+    
+           }
+    
         }
     }
 }
