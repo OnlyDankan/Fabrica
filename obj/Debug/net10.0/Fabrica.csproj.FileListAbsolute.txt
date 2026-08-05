@@ -3,3 +3,13 @@
 /Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/Fabrica.AssemblyInfo.cs
 /Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/Fabrica.csproj.CoreCompileInputs.cache
 /Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/Fabrica.sourcelink.json
+/Users/daniel/Documents/GitHub/Fabrica/bin/Debug/net10.0/Fabrica
+/Users/daniel/Documents/GitHub/Fabrica/bin/Debug/net10.0/Fabrica.deps.json
+/Users/daniel/Documents/GitHub/Fabrica/bin/Debug/net10.0/Fabrica.runtimeconfig.json
+/Users/daniel/Documents/GitHub/Fabrica/bin/Debug/net10.0/Fabrica.dll
+/Users/daniel/Documents/GitHub/Fabrica/bin/Debug/net10.0/Fabrica.pdb
+/Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/Fabrica.dll
+/Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/refint/Fabrica.dll
+/Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/Fabrica.pdb
+/Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/Fabrica.genruntimeconfig.cache
+/Users/daniel/Documents/GitHub/Fabrica/obj/Debug/net10.0/ref/Fabrica.dll

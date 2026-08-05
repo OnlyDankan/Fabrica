@@ -49,13 +49,19 @@ namespace Fabrica
                 case 1:
                     fabricaService.CadastrarProduto();
                 break;
-            }
+
+                case 2:
+                    fabricaService.ListarProduto();
+                break;
+            }   
 
             if (executando)
                 {
-                    Console.WriteLine("Precione qualquer tecla para voltar ao menu...");
+                    Console.WriteLine("\nPrecione qualquer tecla para voltar ao menu...");
                     Console.ReadKey();
                 }
+
+            
     
            }
     

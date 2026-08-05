@@ -19,8 +19,8 @@ namespace Fabrica.Services
             {
                 try
                 {
-                    Console.Write("Cadastro de produto");
-                    Console.Write("Nome: ");
+                    Console.WriteLine("Cadastro de produto");
+                    Console.Write("\nNome: ");
                     string nome = Console.ReadLine() ?? "";
                     Produto? produtoEncontrado = produtos.FirstOrDefault(f => f.Nome == nome);
 
@@ -69,5 +69,28 @@ namespace Fabrica.Services
                 }
             }
         }
+
+
+        public void ListarProduto()
+        {
+            Console.WriteLine("ITENS CADASTRADOS");
+
+            foreach (Produto produto in produtos)
+            {
+                Console.WriteLine($"Nome: {produto.Nome}");
+                Console.WriteLine($"ID: {produto.ID}");
+
+                Console.WriteLine();
+
+                if (produtos.Any())
+                {
+                    Console.WriteLine("Nenhum item cadastrado.");
+                    return;
+                }
+            }
+        }
+
+
+
     }
 }
