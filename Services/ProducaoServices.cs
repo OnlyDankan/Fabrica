@@ -72,7 +72,7 @@ namespace Fabrica.Services
 
 
                     case 2:
-                    Console.WriteLine("ID: ");
+                    Console.Write("ID: ");
                     int idMateria = int.Parse(Console.ReadLine() ?? "");
                     MateriaPrima? materiaEncontrada = materias.FirstOrDefault(m => m.ID == idMateria);
 
@@ -86,7 +86,7 @@ namespace Fabrica.Services
                     }  
 
 
-                    Console.WriteLine("Nome: ");
+                    Console.Write("Nome: ");
                     string Nome = Console.ReadLine() ?? "";
                     MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.Nome == Nome);
                     
@@ -99,6 +99,16 @@ namespace Fabrica.Services
                     {
                         throw new ArgumentException("Número inválido");
                     }
+
+                    Console.Write("Quantidade: ");
+                    int QuantidadeMateria = int.Parse(Console.ReadLine() ?? "");
+                    
+
+                    if (int.IsNegative(QuantidadeMateria))
+                    {
+                        throw new ArgumentException("Número inválido.");                    
+                    }
+                        
 
 
 
