@@ -27,10 +27,13 @@ namespace Fabrica.Services
                     Console.WriteLine("3 - Pedidos");
                     int opcao = int.Parse(Console.ReadLine() ?? "");
 
+                    Console.Clear();
+
                     switch (opcao) {
 
                     case 1:   
-                    Console.WriteLine("Cadastro de produto");
+                    Console.WriteLine("==== Cadastro de produto ====");
+
                     Console.Write("\nNome: ");
                     string nome = Console.ReadLine() ?? "";
                     Produto? produtoEncontrado = produtos.FirstOrDefault(f => f.Nome == nome);
@@ -71,7 +74,10 @@ namespace Fabrica.Services
                     break;
 
 
+
                     case 2:
+                    Console.WriteLine("==== Cadastro de Matéria-Prima ====");
+
                     Console.Write("ID: ");
                     int idMateria = int.Parse(Console.ReadLine() ?? "");
                     MateriaPrima? materiaEncontrada = materias.FirstOrDefault(m => m.ID == idMateria);
@@ -108,11 +114,15 @@ namespace Fabrica.Services
                     {
                         throw new ArgumentException("Número inválido.");                    
                     }
-                        
 
+                    MateriaPrima materia = new MateriaPrima();
 
+                    materias.Add(materia);
 
-                    break;
+                    Console.WriteLine("Produto cadastrado.");
+                    return;
+
+                    //break;
                 }
 
                 } catch (ArgumentException ex)
@@ -123,6 +133,7 @@ namespace Fabrica.Services
                 {
                     Console.WriteLine("Digite um valor válido.");
                 }
+
                 
             }
         }
@@ -161,7 +172,7 @@ namespace Fabrica.Services
                         foreach (MateriaPrima materiaPrima in materias) 
                         {
                         Console.WriteLine("==== MATÉRIAS-PRIMAS REGISTRADAS ====");
-                        Console.WriteLine($"Nome: {}");
+                        Console.WriteLine($"Nome: {materiaPrima.Nome}");
                         }
                     break;
                 }
