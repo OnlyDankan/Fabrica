@@ -12,6 +12,7 @@ namespace Fabrica.Services
     public class FabricaService
     {
         private List<Produto> produtos = new List<Produto>(); //ajustar mais tarde essa list
+        private List<MateriaPrima> materias = new List<MateriaPrima>();
 
         public void CadastrarProduto()
         {
@@ -19,6 +20,16 @@ namespace Fabrica.Services
             {
                 try
                 {
+                    Console.WriteLine("Deseja cadastrar qual item?");
+
+                    Console.WriteLine("1 - Produto");
+                    Console.WriteLine("2 - Máteria-Prima");
+                    Console.WriteLine("3 - Pedidos");
+                    int opcao = int.Parse(Console.ReadLine() ?? "");
+
+                    switch (opcao) {
+
+                    case 1:   
                     Console.WriteLine("Cadastro de produto");
                     Console.Write("\nNome: ");
                     string nome = Console.ReadLine() ?? "";
@@ -59,6 +70,41 @@ namespace Fabrica.Services
                     Console.WriteLine("Produto cadastrado.");
                     break;
 
+
+                    case 2:
+                    Console.WriteLine("ID: ");
+                    int idMateria = int.Parse(Console.ReadLine() ?? "");
+                    MateriaPrima? materiaEncontrada = materias.FirstOrDefault(m => m.ID == idMateria);
+
+                    if (materiaEncontrada != null)
+                    {
+                        throw new ArgumentException("Este ID já está cadastrado. Tente novamente");
+                    }
+                    if (int.IsNegative(idMateria))
+                    {
+                        throw new ArgumentException("Número inválido");      
+                    }  
+
+
+                    Console.WriteLine("Nome: ");
+                    string Nome = Console.ReadLine() ?? "";
+                    MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.Nome == Nome);
+                    
+                    if (materiasEncontrada != null)
+                    {
+                        throw new ArgumentException("Este item já está cadastrado. Tente novamente");              
+                    }
+                    
+                    if (string.IsNullOrWhiteSpace(Nome))
+                    {
+                        throw new ArgumentException("Número inválido");
+                    }
+
+
+
+                    break;
+                }
+
                 } catch (ArgumentException ex)
                 {
                     Console.WriteLine(ex.Message);
@@ -67,27 +113,53 @@ namespace Fabrica.Services
                 {
                     Console.WriteLine("Digite um valor válido.");
                 }
+                
             }
         }
 
 
-        public void ListarProduto()
+
+        public void Listagens()
         {
-            Console.WriteLine("ITENS CADASTRADOS");
+            Console.WriteLine("=== LISTAGENS ====");
+            
+                Console.WriteLine("\n1- Produtos");
+                Console.WriteLine("2 - Matérias-Primas");
+                Console.WriteLine("3 - Pedidos");
+                Console.WriteLine("0 - Voltar");
+                int opcao = int.Parse(Console.ReadLine() ?? "");
 
-            foreach (Produto produto in produtos)
-            {
-                Console.WriteLine($"Nome: {produto.Nome}");
-                Console.WriteLine($"ID: {produto.ID}");
+                Console.Clear();
 
-                Console.WriteLine();
-
-                if (produtos.Any())
+                switch (opcao)
                 {
-                    Console.WriteLine("Nenhum item cadastrado.");
-                    return;
+                    case 1:
+                        foreach (Produto produto in produtos)
+                    {
+                        Console.WriteLine("=== PRODUTOS REGISTRADOS ====");
+                        Console.WriteLine($"\nNome: {produto.Nome}");
+                        Console.WriteLine($"ID: {produto.ID}");
+
+                        Console.WriteLine("Aperte qualquer tecla para voltar ao menu...");
+                        Console.ReadKey();
+                        return; 
+                    }   
+                    break;
+
+                    case 2:
+
+                        foreach (MateriaPrima materiaPrima in materias) 
+                        {
+                        Console.WriteLine("==== MATÉRIAS-PRIMAS REGISTRADAS ====");
+                        Console.WriteLine($"Nome: {}");
+                        }
+                    break;
                 }
-            }
+
+
+
+                
+            
         }
 
 

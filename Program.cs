@@ -20,7 +20,7 @@ namespace Fabrica
             Console.WriteLine("=== FABRICA ===");
 
             Console.WriteLine("1 - Cadastrar produto");
-            Console.WriteLine("2 - Listar produtos");
+            Console.WriteLine("2 - Listagens");
             Console.WriteLine("3 - Atualizar produto");
             Console.WriteLine("4 - Remover produto");
             
@@ -51,13 +51,22 @@ namespace Fabrica
                 break;
 
                 case 2:
-                    fabricaService.ListarProduto();
+                    fabricaService.Listagens();
+                break;
+
+                case 0:
+                    executando = false;
+                    Console.WriteLine("Encerrando o sistema...");
+                break;
+
+                default:
+                    Console.WriteLine("Opção inválida.");
                 break;
             }   
 
             if (executando)
                 {
-                    Console.WriteLine("\nPrecione qualquer tecla para voltar ao menu...");
+                    Console.WriteLine("\nAperte qualquer tecla para voltar ao menu...");
                     Console.ReadKey();
                 }
 
