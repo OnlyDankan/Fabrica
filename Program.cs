@@ -47,7 +47,7 @@ namespace Fabrica
             switch (menuOpcao)
             {
                 case 1:
-                    fabricaService.CadastrarProduto();
+                    fabricaService.Cadastros();
                 break;
 
                 case 2:

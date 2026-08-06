@@ -14,7 +14,7 @@ namespace Fabrica.Services
         private List<Produto> produtos = new List<Produto>(); //ajustar mais tarde essa list
         private List<MateriaPrima> materias = new List<MateriaPrima>();
 
-        public void CadastrarProduto()
+        public void Cadastros()
         {
             while (true)
             {
