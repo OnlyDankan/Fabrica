@@ -133,10 +133,10 @@ namespace Fabrica.Services
                 {
                     Console.WriteLine("Digite um valor válido.");
                 }
-
                 
             }
         }
+
 
 
 
@@ -173,6 +173,7 @@ namespace Fabrica.Services
                         {
                         Console.WriteLine("==== MATÉRIAS-PRIMAS REGISTRADAS ====");
                         Console.WriteLine($"Nome: {materiaPrima.Nome}");
+                        Console.WriteLine($"ID: {materiaPrima.ID}");
                         }
                     break;
                 }
