@@ -21,7 +21,7 @@ namespace Fabrica
 
             Console.WriteLine("1 - Cadastrar produto");
             Console.WriteLine("2 - Listagens");
-            Console.WriteLine("3 - Atualizar produto");
+            Console.WriteLine("3 - Atualizar");
             Console.WriteLine("4 - Remover produto");
             
             Console.WriteLine("\n5 - Cadastrar matéria-prima");
