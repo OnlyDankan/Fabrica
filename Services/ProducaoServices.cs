@@ -107,10 +107,10 @@ namespace Fabrica.Services
                     }
 
                     Console.Write("Quantidade: ");
-                    int QuantidadeMateria = int.Parse(Console.ReadLine() ?? "");
+                    int quantidadeMateria = int.Parse(Console.ReadLine() ?? "");
                     
 
-                    if (int.IsNegative(QuantidadeMateria))
+                    if (int.IsNegative(quantidadeMateria))
                     {
                         throw new ArgumentException("Número inválido.");                    
                     }
