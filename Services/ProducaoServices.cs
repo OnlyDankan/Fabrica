@@ -93,15 +93,15 @@ namespace Fabrica.Services
 
 
                     Console.Write("Nome: ");
-                    string Nome = Console.ReadLine() ?? "";
-                    MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.Nome == Nome);
+                    string nomeMateria = Console.ReadLine() ?? "";
+                    MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.Nome == nomeMateria);
                     
                     if (materiasEncontrada != null)
                     {
                         throw new ArgumentException("Este item já está cadastrado. Tente novamente");              
                     }
                     
-                    if (string.IsNullOrWhiteSpace(Nome))
+                    if (string.IsNullOrWhiteSpace(nomeMateria))
                     {
                         throw new ArgumentException("Número inválido");
                     }
@@ -118,6 +118,11 @@ namespace Fabrica.Services
                     MateriaPrima materia = new MateriaPrima();
 
                     materias.Add(materia);
+
+                    materia.ID = idMateria;
+                    materia.Nome = nomeMateria;
+                    materia.Quantidade = quantidadeMateria;
+
 
                     Console.WriteLine("Produto cadastrado.");
                     return;
