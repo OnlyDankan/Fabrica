@@ -24,14 +24,11 @@ namespace Fabrica
             Console.WriteLine("3 - Atualizar");
             Console.WriteLine("4 - Remover produto");
             
-            Console.WriteLine("\n5 - Cadastrar matéria-prima");
-            Console.WriteLine("6 - Listar máteria-prima");
-            Console.WriteLine("7 - Atualizar matéria-prima");
 
             Console.WriteLine("\n8 - Criar receita de produção");
             Console.WriteLine("9 - Criar pedido de produção");
+            Console.WriteLine("10 - Ver pedidos");
 
-            Console.WriteLine("\n10 - Ver pedidos");
             Console.WriteLine("11 - Verificar se pedido pode ser produzido");
             Console.WriteLine("12 - Iniciar produção");
             Console.WriteLine("13 - Finalizar produção");
@@ -39,7 +36,7 @@ namespace Fabrica
             Console.WriteLine("\n14 - Relatórios");
             
             Console.WriteLine("\n0 - Sair");
-            Console.WriteLine("Escolha uma opção: ");
+            Console.Write("Escolha uma opção: ");
             int menuOpcao = int.Parse(Console.ReadLine() ?? "");
 
             Console.Clear();

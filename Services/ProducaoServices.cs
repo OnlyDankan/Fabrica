@@ -129,7 +129,6 @@ namespace Fabrica.Services
                     Console.WriteLine("Produto cadastrado.");
 
                     break;
-
                     
                 }
 
@@ -149,14 +148,12 @@ namespace Fabrica.Services
 
 
 
-
         public void Listagens()
         {
             Console.WriteLine("=== LISTAGENS ====");
             
                 Console.WriteLine("\n1- Produtos");
                 Console.WriteLine("2 - Matérias-Primas");
-                Console.WriteLine("3 - Pedidos");
                 Console.WriteLine("0 - Voltar");
                 int opcao = int.Parse(Console.ReadLine() ?? "");
 
@@ -192,12 +189,24 @@ namespace Fabrica.Services
                         return;
                         }
                     break;
+
                 }
+        }
 
-
-
-                
+            public void Atualizar()
+        {
+            Console.Clear();
             
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Digite o ID do item que você deseja alterar.");
+                } catch
+                {
+                    
+                }
+            }
         }
 
 
