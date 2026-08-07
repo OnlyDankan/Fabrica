@@ -125,9 +125,8 @@ namespace Fabrica.Services
 
 
                     Console.WriteLine("Produto cadastrado.");
-                    return;
-
-                    //break;
+                
+                    break;
                 }
 
                 } catch (ArgumentException ex)
