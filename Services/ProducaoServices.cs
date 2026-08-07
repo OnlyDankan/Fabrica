@@ -25,7 +25,7 @@ namespace Fabrica.Services
 
                     Console.WriteLine("\n1 - Produto");
                     Console.WriteLine("2 - Máteria-Prima");
-                    Console.WriteLine("3 - Pedidos");
+        
                     int opcao = int.Parse(Console.ReadLine() ?? "");
 
                     Console.Clear();
@@ -130,11 +130,7 @@ namespace Fabrica.Services
 
                     break;
 
-                    case 3:
-                        Console.WriteLine("==== Cadastro de Pedido ====");
                     
-                        Console.WriteLine
-                    break;
                 }
 
                 } catch (ArgumentException ex)
