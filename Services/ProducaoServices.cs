@@ -11,8 +11,9 @@ namespace Fabrica.Services
 {
     public class FabricaService
     {
-        private List<Produto> produtos = new List<Produto>(); //ajustar mais tarde essa list
+        private List<Produto> produtos = new List<Produto>(); 
         private List<MateriaPrima> materias = new List<MateriaPrima>();
+        private List<PedidoProducao> pedidos = new List<PedidoProducao>();
 
         public void Cadastros()
         {
@@ -127,6 +128,12 @@ namespace Fabrica.Services
 
                     Console.WriteLine("Produto cadastrado.");
 
+                    break;
+
+                    case 3:
+                        Console.WriteLine("==== Cadastro de Pedido ====");
+                    
+                        Console.WriteLine
                     break;
                 }
 
