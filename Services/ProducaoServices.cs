@@ -22,7 +22,7 @@ namespace Fabrica.Services
                 {
                     Console.WriteLine("Deseja cadastrar qual item?");
 
-                    Console.WriteLine("1 - Produto");
+                    Console.WriteLine("\n1 - Produto");
                     Console.WriteLine("2 - Máteria-Prima");
                     Console.WriteLine("3 - Pedidos");
                     int opcao = int.Parse(Console.ReadLine() ?? "");
@@ -75,10 +75,11 @@ namespace Fabrica.Services
 
 
 
+
                     case 2:
                     Console.WriteLine("==== Cadastro de Matéria-Prima ====");
 
-                    Console.Write("ID: ");
+                    Console.Write("\nID: ");
                     int idMateria = int.Parse(Console.ReadLine() ?? "");
                     MateriaPrima? materiaEncontrada = materias.FirstOrDefault(m => m.ID == idMateria);
 
@@ -125,7 +126,7 @@ namespace Fabrica.Services
 
 
                     Console.WriteLine("Produto cadastrado.");
-                
+
                     break;
                 }
 
@@ -140,6 +141,8 @@ namespace Fabrica.Services
                 
             }
         }
+
+
 
 
 
@@ -171,13 +174,19 @@ namespace Fabrica.Services
                     }   
                     break;
 
+
                     case 2:
 
                         foreach (MateriaPrima materiaPrima in materias) 
                         {
                         Console.WriteLine("==== MATÉRIAS-PRIMAS REGISTRADAS ====");
-                        Console.WriteLine($"Nome: {materiaPrima.Nome}");
+                        Console.WriteLine($"\nNome: {materiaPrima.Nome}");
                         Console.WriteLine($"ID: {materiaPrima.ID}");
+                        Console.WriteLine($"Quantidade: {materiaPrima.Quantidade}");
+
+                        Console.WriteLine("Aperte qualquer tecla para voltar ao menu...");
+                        Console.ReadKey();
+                        return;
                         }
                     break;
                 }
