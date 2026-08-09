@@ -12,7 +12,7 @@ namespace Fabrica.Services
     public class FabricaService
     {
         private List<Produto> produtos = new List<Produto>(); 
-        private List<MateriaPrima> materias = new List<MateriaPrima>();
+        private List<MateriaPrima> materias = new List<MateriaPrima>(); //unificar essa list com a de produtos.
         private List<PedidoProducao> pedidos = new List<PedidoProducao>();
 
         public void Cadastros()
@@ -201,7 +201,9 @@ namespace Fabrica.Services
                 try
                 {
                  Console.WriteLine("Digite o ID do item que você deseja atualizar: ");
-                 string attId = Console.ReadLine() ?? ""; 
+                 string attId = Console.ReadLine() ?? "";
+                 
+
                 } catch
                 {
                     
