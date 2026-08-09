@@ -140,7 +140,6 @@ namespace Fabrica.Services
                 {
                     Console.WriteLine("Digite um valor válido.");
                 }
-                
             }
         }
 
@@ -201,7 +200,8 @@ namespace Fabrica.Services
             {
                 try
                 {
-                    Console.WriteLine("Digite o ID do item que você deseja alterar.");
+                 Console.WriteLine("Digite o ID do item que você deseja atualizar: ");
+                 string attId = Console.ReadLine() ?? ""; 
                 } catch
                 {
                     
