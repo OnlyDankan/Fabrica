@@ -221,9 +221,17 @@ namespace Fabrica.Services
                             {
                                 case 1:
                                     Console.Write("Digite o ID do produto: ");
-                                    string idProd = Console.ReadLine() ?? "";
-                                     
+                                    int idProd = int.Parse(Console.ReadLine() ?? "");
+                                    Produto? IDproduto = produtos.FirstOrDefault(p => p.ID == idProd);
+
+                                     if (IDproduto == null)
+                                    {
+                                        Console.WriteLine("Produto não encontrado. Tente novamente.");
+                                        return;
+                                    }
                                     break;
+
+                                   
                             }
                         break;
                     }
