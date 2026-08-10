@@ -141,6 +141,7 @@ namespace Fabrica.Services
                 {
                     Console.WriteLine("Digite um valor válido.");
                 }
+                break;
             }
         }
 
@@ -205,7 +206,8 @@ namespace Fabrica.Services
                  Console.WriteLine("1 - Produtos");
                  Console.WriteLine("2 - Matéria-Prima");
                  Console.Write("Digite sua resposta: ");
-                 int opcaoAtt = int.Parse(Console.ReadLine() ?? "");
+
+                if (int.TryParse(Console.ReadLine(), out int opcaoAtt)) {
                  
                  Console.Clear();
 
@@ -228,6 +230,9 @@ namespace Fabrica.Services
                                     {
                                         Console.WriteLine("Produto não encontrado. Tente novamente.");
                                         return;
+                                    } else
+                                    {
+                                        Console.WriteLine("");
                                     }
                                     break;
 
@@ -235,9 +240,7 @@ namespace Fabrica.Services
                             }
                         break;
                     }
-                
-                 
-
+                  }
                 } catch
                 {
                     
