@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Linq;
 using System.Data;
 using Fabrica.Models;
+using System.Diagnostics;
 
 
 
@@ -200,8 +201,33 @@ namespace Fabrica.Services
             {
                 try
                 {
-                 Console.WriteLine("Digite o ID do item que você deseja atualizar: ");
-                 string attId = Console.ReadLine() ?? "";
+                 Console.WriteLine("O que você deseja atualziar?");
+                 Console.WriteLine("1 - Produtos");
+                 Console.WriteLine("2 - Matéria-Prima");
+                 Console.Write("Digite sua resposta: ");
+                 int opcaoAtt = int.Parse(Console.ReadLine() ?? "");
+                 
+                 Console.Clear();
+
+                 switch (opcaoAtt)
+                    {
+                        case 1:
+                            Console.WriteLine("Qual você deseja alterar?");
+                            Console.WriteLine("1 - Nome");
+                            Console.WriteLine("2 - ID"); 
+                            int produtoAtt = int.Parse(Console.ReadLine() ?? "");
+
+                           switch (produtoAtt)
+                            {
+                                case 1:
+                                    Console.Write("Digite o ID do produto: ");
+                                    string idProd = Console.ReadLine() ?? "";
+                                     
+                                    break;
+                            }
+                        break;
+                    }
+                
                  
 
                 } catch
