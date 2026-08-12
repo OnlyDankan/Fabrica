@@ -253,6 +253,8 @@ namespace Fabrica.Services
                                     }
                                     produto.Nome = nomeAtt;
 
+                                    Console.WriteLine("Nome alterado com sucesso!");
+
                                     
                             break;
 
