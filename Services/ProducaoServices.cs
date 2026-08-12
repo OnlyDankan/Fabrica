@@ -152,6 +152,10 @@ namespace Fabrica.Services
         public void Listagens()
         {
             Console.WriteLine("=== LISTAGENS ====");
+
+            Console.Clear();
+
+            while (true) {
             
                 Console.WriteLine("\n1- Produtos");
                 Console.WriteLine("2 - Matérias-Primas");
@@ -190,8 +194,8 @@ namespace Fabrica.Services
                         return;
                         }
                     break;
-
                 }
+            }
         }
 
             public void Atualizar()
