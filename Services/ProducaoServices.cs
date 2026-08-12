@@ -198,7 +198,7 @@ namespace Fabrica.Services
             }
         }
 
-            public void Atualizar()
+            public void Atualizar(Produto produto)
         {
             Console.Clear();
             
@@ -237,7 +237,22 @@ namespace Fabrica.Services
                                     } 
 
                                     Console.WriteLine("Novo nome: ");
-                                    string pNome = Console.ReadLine() ?? "";
+                                    string nomeAtt = Console.ReadLine() ?? "";
+
+                                    if (string.IsNullOrEmpty(nomeAtt))
+                                    {
+                                      throw new ArgumentException("o nome não pode ser vazio");            
+                                    }
+
+                                    bool nomeExiste = produtos.Any(p => p.Nome == nomeAtt && p != produto);
+                                    
+                                    if (nomeExiste)
+                                    {
+                                       throw new ArgumentException("Nome já existe. Tente novamente.");
+                                                  
+                                    }
+                                    produto.Nome = nomeAtt;
+
                                     
                             break;
 
