@@ -254,38 +254,39 @@ namespace Fabrica.Services
                                     produto.Nome = nomeAtt;
                                     Console.WriteLine("Nome alterado com sucesso!");
                             break;
-
-
-
+                                case 2:
+                                    Console.Write("Digite o ID do produto que você deseja alterar: ");
+                                    int novoNome = int.Parse(Console.ReadLine() ?? "");
+                                break;
                            
                             }                            
                         break;
-                        
-                         case 2:
-                                Console.WriteLine("Qual você deseja alterar?");
-                                Console.WriteLine("\n 1 - ID");
-                                Console.WriteLine("2 - Nome");
-                                Console.WriteLine("3 - Quantidade");
-                                int materiaAtt = int.Parse(Console.ReadLine() ?? "");
 
-                                switch (materiaAtt)
-                                  {
-                                    case 1:
-                                        Console.WriteLine("Digite o ID do produto que você deseja alterar: ");
-                                        int idMate = int.Parse(Console.ReadLine() ?? "");
-                                        MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.ID == idMate);
+                     case 2:
+                         Console.WriteLine("Qual você deseja alterar?");
+                         Console.WriteLine("\n 1 - ID");
+                         Console.WriteLine("2 - Nome");
+                         Console.WriteLine("3 - Quantidade");
+                         int materiaAtt = int.Parse(Console.ReadLine() ?? "");
 
-                                        if (materiasEncontrada == null)
-                                            {
-                                              Console.WriteLine("Item não encontrado. Tente novamente.");      
-                                              return;      
-                                            }
+                            switch (materiaAtt)
+                              {
+                                case 1:
+                                    Console.WriteLine("Digite o ID do produto que você deseja alterar: ");
+                                    int idMate = int.Parse(Console.ReadLine() ?? "");
+                                    MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.ID == idMate);
 
-                                            Console.WriteLine("");
-                                    break;
-                                  }
+                                    if (materiasEncontrada == null)
+                                        {
+                                          Console.WriteLine("Item não encontrado. Tente novamente.");      
+                                          return;      
+                                        }
 
-                            break;
+                                        Console.WriteLine("");
+                                         break;
+                                }
+
+                        break;
                     }
                   }
                 } catch
