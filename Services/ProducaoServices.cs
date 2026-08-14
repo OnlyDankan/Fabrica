@@ -257,11 +257,11 @@ namespace Fabrica.Services
                                 case 2:
                                     Console.Write("Digite o ID do produto que você deseja alterar: ");
                                     string prodId = Console.ReadLine() ?? "";
-                                    Produto? idProduto = produtos.FirstOrDefault(p => p.Nome == prodId);
+                                    Produto? idProduto = produtos.FirstOrDefault(p => p.Nome == );
 
                                     if (!int.TryParse(prodId, out int novoID))
                                     {
-                                      
+                                      throw new ArgumentException("ID inválido. Tente novamente");
                                     }
                                 break;
                            
