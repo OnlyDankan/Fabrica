@@ -223,6 +223,8 @@ namespace Fabrica.Services
                             Console.WriteLine("2 - ID"); 
                             int produtoAtt = int.Parse(Console.ReadLine() ?? "");
 
+                            Console.Clear();
+
                            switch (produtoAtt)
                             {
                                 case 1:
@@ -235,6 +237,8 @@ namespace Fabrica.Services
                                         Console.WriteLine("Produto não encontrado. Tente novamente.");
                                         return; 
                                     } 
+
+                                    Console.Clear();
 
                                     Console.WriteLine("Novo nome: ");
                                     string nomeAtt = Console.ReadLine() ?? "";
@@ -253,16 +257,26 @@ namespace Fabrica.Services
                                     }
                                     produto.Nome = nomeAtt;
                                     Console.WriteLine("Nome alterado com sucesso!");
-                            break;
+                                break;
+
+
                                 case 2:
                                     Console.Write("Digite o ID do produto que você deseja alterar: ");
                                     string prodId = Console.ReadLine() ?? "";
-                                    Produto? idProduto = produtos.FirstOrDefault(p => p.Nome == );
+                                    //Produto? idProduto = produtos.FirstOrDefault(p => p.Nome == );
 
                                     if (!int.TryParse(prodId, out int novoID))
                                     {
                                       throw new ArgumentException("ID inválido. Tente novamente");
                                     }
+
+                                    Console.WriteLine("Novo ID: ");
+                                    string idAtt = Console.ReadLine() ?? "";
+
+                                    bool idExiste = produtos.Any(p => p.ID == novoID && p != produto);
+
+
+                                    
                                 break;
                            
                             }                            
