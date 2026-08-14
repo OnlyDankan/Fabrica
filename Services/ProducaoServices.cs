@@ -198,6 +198,8 @@ namespace Fabrica.Services
             }
         }
 
+
+
             public void Atualizar(Produto produto, MateriaPrima materia)
         {
             Console.Clear();
@@ -248,14 +250,14 @@ namespace Fabrica.Services
                                       throw new ArgumentException("o nome não pode ser vazio");            
                                     }
 
-                                    bool nomeExiste = produtos.Any(p => p.Nome == nomeAtt && p != produto);
+                                    bool nomeExiste = produtos.Any(p => p.Nome == nomeAtt && p != IDproduto);
                                     
                                     if (nomeExiste)
                                     {
                                        throw new ArgumentException("Nome já existe. Tente novamente.");
                                                   
                                     }
-                                    produto.Nome = nomeAtt;
+                                    IDproduto.Nome = nomeAtt;
                                     Console.WriteLine("Nome atualizado com sucesso!");
                                 break;
 
@@ -318,7 +320,7 @@ namespace Fabrica.Services
                                             throw new ArgumentException("O ID não pode ser negativo.");
                                         }
 
-                                        materia.ID = idATT;
+                                        materiasEncontrada.ID = idATT;
                                         Console.WriteLine("ID atualizado com sucesso!");
                                         
                                     break;    
