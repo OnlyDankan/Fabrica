@@ -3,6 +3,7 @@ using Fabrica.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
+using Fabrica.Models;
 
 namespace Fabrica
 {
@@ -49,6 +50,10 @@ namespace Fabrica
 
                 case 2:
                     fabricaService.Listagens();
+                break;
+
+                case 3:
+                    fabricaService.Atualizar();                
                 break;
 
                 case 0:
