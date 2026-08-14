@@ -198,7 +198,7 @@ namespace Fabrica.Services
             }
         }
 
-            public void Atualizar(Produto produto)
+            public void Atualizar(Produto produto, MateriaPrima materia)
         {
             Console.Clear();
             
@@ -256,7 +256,7 @@ namespace Fabrica.Services
                                                   
                                     }
                                     produto.Nome = nomeAtt;
-                                    Console.WriteLine("Nome alterado com sucesso!");
+                                    Console.WriteLine("Nome atualizado com sucesso!");
                                 break;
 
 
@@ -270,6 +270,8 @@ namespace Fabrica.Services
                                       throw new ArgumentException("ID inválido. Tente novamente");
                                     }
 
+                                    Console.Clear();
+
                                     Console.Write("Novo ID: ");
                                     int idAtt = int.Parse(Console.ReadLine() ?? "");
 
@@ -279,11 +281,7 @@ namespace Fabrica.Services
                                     }
 
                                     produto.ID = idAtt;
-                                    Console.WriteLine("ID alterado com sucesso!");
-
-
-
-
+                                    Console.WriteLine("ID atualizado com sucesso!");
                                     
                                 break;
                            
@@ -310,8 +308,20 @@ namespace Fabrica.Services
                                           return;      
                                         }
 
-                                        Console.WriteLine("");
-                                         break;
+                                        Console.Clear();
+
+                                        Console.Write("Novo ID: ");
+                                        int idATT = int.Parse(Console.ReadLine() ?? "");
+
+                                        if (int.IsNegative(idATT))
+                                        {
+                                            throw new ArgumentException("O ID não pode ser negativo.");
+                                        }
+
+                                        materia.ID = idATT;
+                                        Console.WriteLine("ID atualizado com sucesso!");
+                                        
+                                    break;    
                                 }
 
                         break;
