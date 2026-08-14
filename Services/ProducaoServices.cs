@@ -240,7 +240,7 @@ namespace Fabrica.Services
 
                                     Console.Clear();
 
-                                    Console.WriteLine("Novo nome: ");
+                                    Console.Write("Novo nome: ");
                                     string nomeAtt = Console.ReadLine() ?? "";
 
                                     if (string.IsNullOrEmpty(nomeAtt))
@@ -270,10 +270,18 @@ namespace Fabrica.Services
                                       throw new ArgumentException("ID inválido. Tente novamente");
                                     }
 
-                                    Console.WriteLine("Novo ID: ");
-                                    string idAtt = Console.ReadLine() ?? "";
+                                    Console.Write("Novo ID: ");
+                                    int idAtt = int.Parse(Console.ReadLine() ?? "");
 
-                                    bool idExiste = produtos.Any(p => p.ID == novoID && p != produto);
+                                    if (int.IsNegative(idAtt))
+                                    {
+                                      throw new ArgumentException("Número inválido. Tente novamente");            
+                                    }
+
+                                    produto.ID = idAtt;
+                                    Console.WriteLine("ID alterado com sucesso!");
+
+
 
 
                                     
