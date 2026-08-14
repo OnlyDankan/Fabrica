@@ -200,7 +200,7 @@ namespace Fabrica.Services
 
 
 
-            public void Atualizar(Produto produto, MateriaPrima materia)
+            public void Atualizar()
         {
             Console.Clear();
             
