@@ -256,7 +256,13 @@ namespace Fabrica.Services
                             break;
                                 case 2:
                                     Console.Write("Digite o ID do produto que você deseja alterar: ");
-                                    int novoNome = int.Parse(Console.ReadLine() ?? "");
+                                    string prodId = Console.ReadLine() ?? "";
+                                    Produto? idProduto = produtos.FirstOrDefault(p => p.Nome == prodId);
+
+                                    if (!int.TryParse(prodId, out int novoID))
+                                    {
+                                      
+                                    }
                                 break;
                            
                             }                            
