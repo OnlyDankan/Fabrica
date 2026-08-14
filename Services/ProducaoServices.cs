@@ -282,7 +282,7 @@ namespace Fabrica.Services
                                       throw new ArgumentException("Número inválido. Tente novamente");            
                                     }
 
-                                    produto.ID = idAtt;
+                                    novoID = idAtt;
                                     Console.WriteLine("ID atualizado com sucesso!");
                                     
                                 break;
