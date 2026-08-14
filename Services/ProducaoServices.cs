@@ -282,7 +282,7 @@ namespace Fabrica.Services
                                       throw new ArgumentException("Número inválido. Tente novamente");            
                                     }
 
-                                    novoID = idAtt;
+                                    novoID = idAtt; //eu acho que ta errado isso aqui
                                     Console.WriteLine("ID atualizado com sucesso!");
                                     
                                 break;
