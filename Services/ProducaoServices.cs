@@ -161,6 +161,7 @@ namespace Fabrica.Services
                 Console.WriteLine("\n1 - Produtos");
                 Console.WriteLine("2 - Matérias-Primas");
                 Console.WriteLine("0 - Voltar");
+                Console.Write("Sua resposta: ");
                 int opcao = int.Parse(Console.ReadLine() ?? "");
 
                 Console.Clear();
@@ -224,6 +225,7 @@ namespace Fabrica.Services
                             Console.WriteLine("Qual você deseja alterar?");
                             Console.WriteLine("\n1 - Nome");
                             Console.WriteLine("2 - ID"); 
+                            Console.Write("Sua resposta: ");
                             int produtoAtt = int.Parse(Console.ReadLine() ?? "");
 
                             Console.Clear();
@@ -297,6 +299,7 @@ namespace Fabrica.Services
                          Console.WriteLine("\n 1 - ID");
                          Console.WriteLine("2 - Nome");
                          Console.WriteLine("3 - Quantidade");
+                         Console.Write("Sua resposta: ");
                          int materiaAtt = int.Parse(Console.ReadLine() ?? "");
 
                             switch (materiaAtt)
