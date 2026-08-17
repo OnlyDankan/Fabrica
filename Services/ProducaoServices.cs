@@ -296,7 +296,7 @@ namespace Fabrica.Services
 
                      case 2:
                          Console.WriteLine("Qual você deseja alterar?");
-                         Console.WriteLine("\n 1 - ID");
+                         Console.WriteLine("\n1 - ID");
                          Console.WriteLine("2 - Nome");
                          Console.WriteLine("3 - Quantidade");
                          Console.Write("Sua resposta: ");
@@ -403,7 +403,7 @@ namespace Fabrica.Services
         {
             Console.WriteLine("=== REMOVER ===");
 
-            Console.WriteLine("1 - Produtos");
+            Console.WriteLine("\n1 - Produtos");
             Console.WriteLine("2 - Materia-Prima");
             Console.WriteLine("3 - Pedidos");
 
@@ -424,8 +424,9 @@ namespace Fabrica.Services
                     }
 
                     Console.WriteLine("Tem certeza que deseja apagar esse produto?");
-                    Console.WriteLine("1 - Sim.");
+                    Console.WriteLine("\n1 - Sim.");
                     Console.WriteLine("2 - Não");
+                    Console.Write("Sua resposta: ");
                     int apagarProduto = int.Parse(Console.ReadLine() ?? "");
 
                     if (apagarProduto == 1)
@@ -434,6 +435,34 @@ namespace Fabrica.Services
                         
                         Console.WriteLine("Produto removido com sucesso!");
                     } else if (apagarProduto == 2)
+                    {
+                        return;
+                    }
+                break;
+
+                case 2:
+                    Console.Write("Digite o ID da Matéria-Prima que você deseja remover: ");
+                    int materiaRemove = int.Parse(Console.ReadLine() ?? "");
+                    MateriaPrima? materiaRemover = materias.FirstOrDefault(m => m.ID == materiaRemove);
+
+                    if (materiaRemover == null)
+                    {
+                        Console.WriteLine("ID não encontrado. Tente novamente.");
+                        return;
+                    }
+
+                    Console.WriteLine("Tem certea que deseja apagar essa Matéria-Prima?");
+                    Console.WriteLine("\n1 - Sim");
+                    Console.WriteLine("2 - Não");
+                    Console.Write("Sua resposta: ");
+                    int apagarMateria = int.Parse(Console.ReadLine() ?? "");
+
+                    if (apagarMateria == 1)
+                    {
+                        materias.Remove(materiaRemover);
+
+                        Console.WriteLine("Matéria removida com sucesso!");
+                    } else if (apagarMateria == 2)
                     {
                         return;
                     }
