@@ -26,6 +26,7 @@ namespace Fabrica.Services
 
                     Console.WriteLine("\n1 - Produto");
                     Console.WriteLine("2 - Máteria-Prima");
+                    Console.Write("Sua resposta: ");
         
                     int opcao = int.Parse(Console.ReadLine() ?? "");
 
@@ -157,7 +158,7 @@ namespace Fabrica.Services
 
             while (true) {
             
-                Console.WriteLine("\n1- Produtos");
+                Console.WriteLine("\n1 - Produtos");
                 Console.WriteLine("2 - Matérias-Primas");
                 Console.WriteLine("0 - Voltar");
                 int opcao = int.Parse(Console.ReadLine() ?? "");
@@ -324,7 +325,7 @@ namespace Fabrica.Services
                                         materiasEncontrada.ID = idATT;
                                         Console.WriteLine("ID atualizado com sucesso!");
                                     return;    
-                                    
+
 
                                     case 2:
                                         Console.Write("Digite o ID da Materia-Prima que você deseja alterar: ");

@@ -70,9 +70,7 @@ namespace Fabrica
                 {
                     Console.WriteLine("\nAperte qualquer tecla para voltar ao menu...");
                     Console.ReadKey();
-                }
-
-            
+                }            
     
            }
     
