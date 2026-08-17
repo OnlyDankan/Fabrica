@@ -323,8 +323,8 @@ namespace Fabrica.Services
 
                                         materiasEncontrada.ID = idATT;
                                         Console.WriteLine("ID atualizado com sucesso!");
-                                        
                                     return;    
+                                    
 
                                     case 2:
                                         Console.Write("Digite o ID da Materia-Prima que você deseja alterar: ");
