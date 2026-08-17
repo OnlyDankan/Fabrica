@@ -285,6 +285,7 @@ namespace Fabrica.Services
                                     novoID = idAtt; //eu acho que ta errado isso aqui
                                     Console.WriteLine("ID atualizado com sucesso!");
                                     
+                                    
                                 break;
                            
                             }                            
@@ -355,7 +356,7 @@ namespace Fabrica.Services
 
                                         materiaNome.Nome = novoNomeMate;
                                         Console.WriteLine("Nome atualizado com sucesso!");
-                                    break;
+                                    return;
 
 
                                     case 3:
@@ -381,15 +382,11 @@ namespace Fabrica.Services
 
                                         novaMateria.Quantidade = quantidadeMateria;
                                         Console.WriteLine("Quantidade atualizada com sucesso!");
-                                        
-
-                                        
-
-                                    break;
+                                    return;
                                 }
-
                         break;
                     }
+
                   }
                 } catch
                 {
