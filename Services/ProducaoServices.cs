@@ -326,7 +326,7 @@ namespace Fabrica.Services
                                     break;    
 
                                     case 2:
-                                        Console.Write("Digite o ID do produto que você deseja alterar: ");
+                                        Console.Write("Digite o ID da Materia-Prima que você deseja alterar: ");
                                         int idMateria = int.Parse(Console.ReadLine() ?? "");
                                         MateriaPrima? materiaNome = materias.FirstOrDefault(m => m.ID == idMateria);
 
@@ -347,7 +347,22 @@ namespace Fabrica.Services
                                         }
 
                                         bool nomeMateExiste = materias.Any(m => m.Nome == novoNomeMate && m.ID != idMateria);
+
+                                        if (nomeMateExiste)
+                                        {
+                                            throw new ArgumentException("Nome já existente. Tente novamente.");
+                                        }
+
+                                        materiaNome.Nome = novoNomeMate;
+                                        Console.WriteLine("Nome atualizado com sucesso!");
+                                    break;
+
+                                    case 3:
+                                        Console.Write("Digite o ID da Materia-Prima que você deseja alterar: ");
+                                        int MateriaBusca = int.Parse(Console.ReadLine() ?? "");
+                                        MateriaPrima? novaMateria = 
                                         
+
                                     break;
                                 }
 
