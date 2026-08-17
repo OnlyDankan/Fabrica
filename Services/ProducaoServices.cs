@@ -392,10 +392,13 @@ namespace Fabrica.Services
                     }
 
                   }
+
                 } catch
                 {
                     
                 }
+
+                public void Remover();
             }
         }
 

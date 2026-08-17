@@ -56,6 +56,10 @@ namespace Fabrica
                     fabricaService.Atualizar();                
                 break;
 
+                case 4:
+                    fabricaService.Remover();
+                break;
+
                 case 0:
                     executando = false;
                     Console.WriteLine("Encerrando o sistema...");
