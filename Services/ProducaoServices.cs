@@ -468,6 +468,34 @@ namespace Fabrica.Services
                     }
                 break;
 
+                case 3:
+                    Console.Write("Digite o ID do pedido que você deseja remover: ");
+                    int pedidoRemove = int.Parse(Console.ReadLine() ?? "");
+                    PedidoProducao? pedidoRemover = pedidos.FirstOrDefault(p => p.ID == pedidoRemove);
+
+                    if (pedidoRemover == null)
+                    {
+                        Console.WriteLine("ID não encontrado. Tente novamente.");
+                        return;
+                    }
+
+                    Console.WriteLine("Tem certeza que deseja apagar esse pedido?");
+                    Console.WriteLine("\n1 - Sim");
+                    Console.WriteLine("2 - Não");
+                    Console.Write("Sua resposta: ");
+                    int apagarPedido = int.Parse(Console.ReadLine() ?? "");
+
+                    if (apagarPedido == 1)
+                    {
+                        pedidos.Remove(pedidoRemover);
+
+                        Console.WriteLine("Pedido removido com sucesso!");
+                    } else if (apagarPedido == 2)
+                    {
+                        return;
+                    }
+                break;
+
                 
             }   
         }
