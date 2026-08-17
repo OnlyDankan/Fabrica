@@ -415,17 +415,32 @@ namespace Fabrica.Services
                 case 1:
                     Console.Write("Digite o ID do produto que você deseja remover: ");
                     int produtoRemove = int.Parse(Console.ReadLine() ?? "");
-                    Produto? produtoRemover = produtos.FirstOrDefault(r => r.ID == produtoRemove)
+                    Produto? produtoRemover = produtos.FirstOrDefault(r => r.ID == produtoRemove);
 
-                return;
-            }
-            
-            
-            
-            
+                    if (produtoRemover == null)
+                    {
+                        Console.WriteLine("ID não encontrado. Tente novamente.");
+                        return;
+                    }
+
+                    Console.WriteLine("Tem certeza que deseja apagar esse produto?");
+                    Console.WriteLine("1 - Sim.");
+                    Console.WriteLine("2 - Não");
+                    int apagarProduto = int.Parse(Console.ReadLine() ?? "");
+
+                    if (apagarProduto == 1)
+                    {
+                        produtos.Remove(produtoRemover);
+                        
+                        Console.WriteLine("Produto removido com sucesso!");
+                    } else if (apagarProduto == 2)
+                    {
+                        return;
+                    }
+                break;
+
+                
+            }   
         }
-
-
-
     }
 }
