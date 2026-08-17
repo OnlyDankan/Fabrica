@@ -397,9 +397,12 @@ namespace Fabrica.Services
                 {
                     
                 }
-
-                public void Remover();
             }
+        }
+
+        public void Remover()
+        {
+            Console.Write("Digite o ID do item que você quer remover: ");
         }
 
 
