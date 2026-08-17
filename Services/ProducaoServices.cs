@@ -245,9 +245,9 @@ namespace Fabrica.Services
                                     Console.Write("Novo nome: ");
                                     string nomeAtt = Console.ReadLine() ?? "";
 
-                                    if (string.IsNullOrEmpty(nomeAtt))
+                                    if (string.IsNullOrWhiteSpace(nomeAtt))
                                     {
-                                      throw new ArgumentException("o nome não pode ser vazio");            
+                                      throw new ArgumentException("O nome não pode ser vazio");            
                                     }
 
                                     bool nomeExiste = produtos.Any(p => p.Nome == nomeAtt && p != IDproduto);
@@ -300,7 +300,7 @@ namespace Fabrica.Services
                             switch (materiaAtt)
                               {
                                 case 1:
-                                    Console.WriteLine("Digite o ID do produto que você deseja alterar: ");
+                                    Console.Write("Digite o ID do produto que você deseja alterar: ");
                                     int idMate = int.Parse(Console.ReadLine() ?? "");
                                     MateriaPrima? materiasEncontrada = materias.FirstOrDefault(m => m.ID == idMate);
 
@@ -324,6 +324,31 @@ namespace Fabrica.Services
                                         Console.WriteLine("ID atualizado com sucesso!");
                                         
                                     break;    
+
+                                    case 2:
+                                        Console.Write("Digite o ID do produto que você deseja alterar: ");
+                                        int idMateria = int.Parse(Console.ReadLine() ?? "");
+                                        MateriaPrima? materiaNome = materias.FirstOrDefault(m => m.ID == idMateria);
+
+                                        if (materiaNome == null)
+                                        {
+                                            Console.WriteLine("Matéria-Prima não encontrada. Tente novamente.");
+                                            return;
+                                        }
+
+                                        Console.Clear();
+
+                                        Console.Write("Novo nome: ");
+                                        string novoNomeMate = Console.ReadLine() ?? "";
+
+                                        if (string.IsNullOrWhiteSpace(novoNomeMate))
+                                        {
+                                            throw new ArgumentException("O nome não pode ser vazio.");
+                                        }
+
+                                        bool nomeMateExiste = materias.Any(m => m.Nome == novoNomeMate && m.ID != idMateria);
+                                        
+                                    break;
                                 }
 
                         break;
