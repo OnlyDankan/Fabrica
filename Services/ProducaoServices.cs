@@ -392,9 +392,12 @@ namespace Fabrica.Services
                     }
 
                   }
-                } catch
+                } catch (ArgumentException ex)
                 {
-                    
+                    Console.WriteLine(ex.Message);
+                } catch (FormatException)
+                {
+                    Console.WriteLine("Digite um valor válido");
                 }
             }
         }
