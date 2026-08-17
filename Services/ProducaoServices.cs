@@ -357,10 +357,32 @@ namespace Fabrica.Services
                                         Console.WriteLine("Nome atualizado com sucesso!");
                                     break;
 
+
                                     case 3:
                                         Console.Write("Digite o ID da Materia-Prima que você deseja alterar: ");
                                         int MateriaBusca = int.Parse(Console.ReadLine() ?? "");
-                                        MateriaPrima? novaMateria = 
+                                        MateriaPrima? novaMateria = materias.FirstOrDefault(m => m.ID == MateriaBusca);
+
+                                    if (novaMateria == null)
+                                        {
+                                            Console.WriteLine("Matéria-Prima não encontrada. Tente novamente.");
+                                            return;
+                                        }
+
+                                        Console.Clear();
+
+                                        Console.Write("Nova Quantidade: ");
+                                        int quantidadeMateria = int.Parse(Console.ReadLine() ?? "");
+                                        
+                                        if (int.IsNegative(quantidadeMateria))
+                                        {
+                                            throw new ArgumentException("A quantidade não pode ser negativa. Tente novamente.");
+                                        }
+
+                                        novaMateria.Quantidade = quantidadeMateria;
+                                        Console.WriteLine("Quantidade atualizada com sucesso!");
+                                        
+
                                         
 
                                     break;
