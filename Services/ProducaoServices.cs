@@ -324,7 +324,7 @@ namespace Fabrica.Services
                                         materiasEncontrada.ID = idATT;
                                         Console.WriteLine("ID atualizado com sucesso!");
                                         
-                                    break;    
+                                    return;    
 
                                     case 2:
                                         Console.Write("Digite o ID da Materia-Prima que você deseja alterar: ");
@@ -364,11 +364,11 @@ namespace Fabrica.Services
                                         int MateriaBusca = int.Parse(Console.ReadLine() ?? "");
                                         MateriaPrima? novaMateria = materias.FirstOrDefault(m => m.ID == MateriaBusca);
 
-                                    if (novaMateria == null)
-                                        {
+                                         if (novaMateria == null)
+                                         {
                                             Console.WriteLine("Matéria-Prima não encontrada. Tente novamente.");
                                             return;
-                                        }
+                                         }
 
                                         Console.Clear();
 
