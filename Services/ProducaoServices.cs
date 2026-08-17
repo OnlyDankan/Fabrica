@@ -392,7 +392,6 @@ namespace Fabrica.Services
                     }
 
                   }
-
                 } catch
                 {
                     
@@ -402,7 +401,28 @@ namespace Fabrica.Services
 
         public void Remover()
         {
-            Console.Write("Digite o ID do item que você quer remover: ");
+            Console.WriteLine("=== REMOVER ===");
+
+            Console.WriteLine("1 - Produtos");
+            Console.WriteLine("2 - Materia-Prima");
+            Console.WriteLine("3 - Pedidos");
+
+            Console.Write("Escolha o tipo: ");
+            int opcaoRemove = int.Parse(Console.ReadLine() ?? "");
+
+            switch(opcaoRemove)
+            {
+                case 1:
+                    Console.Write("Digite o ID do produto que você deseja remover: ");
+                    int produtoRemove = int.Parse(Console.ReadLine() ?? "");
+                    Produto? produtoRemover = produtos.FirstOrDefault(r => r.ID == produtoRemove)
+
+                return;
+            }
+            
+            
+            
+            
         }
 
 
