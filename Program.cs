@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data;
 using Fabrica.Models;
+using Pedido.Services;
 
 namespace Fabrica
 {
@@ -13,6 +14,7 @@ namespace Fabrica
         {
 
             FabricaService fabricaService = new FabricaService();
+            PedidoService pedidoService = new PedidoService();
             
 
             bool executando = true;
@@ -62,7 +64,7 @@ namespace Fabrica
                 break;
 
                 case 5:
-
+                    pedidoService.ReceitaProducao();
                 break;
 
                 case 0:
