@@ -13,6 +13,7 @@ namespace Fabrica
         {
 
             FabricaService fabricaService = new FabricaService();
+            
 
             bool executando = true;
 
@@ -23,10 +24,10 @@ namespace Fabrica
             Console.WriteLine("1 - Cadastrar produto");
             Console.WriteLine("2 - Listagens");
             Console.WriteLine("3 - Atualizar");
-            Console.WriteLine("4 - Remover produto");
+            Console.WriteLine("4 - Remover itens");
             
 
-            Console.WriteLine("\n8 - Criar receita de produção");
+            Console.WriteLine("\n5 - Criar receita de produção");
             Console.WriteLine("9 - Criar pedido de produção");
             Console.WriteLine("10 - Ver pedidos");
 
@@ -58,6 +59,10 @@ namespace Fabrica
 
                 case 4:
                     fabricaService.Remover();
+                break;
+
+                case 5:
+
                 break;
 
                 case 0:

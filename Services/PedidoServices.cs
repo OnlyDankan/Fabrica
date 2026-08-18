@@ -11,10 +11,13 @@ using Fabrica.Services;
 namespace Pedido.Services
 {
     public class PedidoService
-    {
-        static void Main(string[] args)
+    {   
+         FabricaService fabricaService = new FabricaService();
+         
+         public void ReceitaProducao()
         {
-             FabricaService fabricaService = new FabricaService();
+            
         }
+               
     }
 }
