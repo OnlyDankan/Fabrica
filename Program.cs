@@ -14,7 +14,7 @@ namespace Fabrica
         {
 
             FabricaService fabricaService = new FabricaService();
-            PedidoService pedidoService = new PedidoService();
+            PedidoService pedidoService = new PedidoService(fabricaService);
             
 
             bool executando = true;
@@ -64,7 +64,7 @@ namespace Fabrica
                 break;
 
                 case 5:
-                    pedidoService.ReceitaProducao();
+                    pedidoService.CriarReceita();
                 break;
 
                 case 0:
@@ -82,9 +82,7 @@ namespace Fabrica
                     Console.WriteLine("\nAperte qualquer tecla para voltar ao menu...");
                     Console.ReadKey();
                 }            
-    
            }
-    
         }
     }
 }
