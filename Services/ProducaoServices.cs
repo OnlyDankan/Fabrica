@@ -5,6 +5,7 @@ using System.Linq;
 using System.Data;
 using Fabrica.Models;
 using System.Diagnostics;
+using Pedido.Services;
 
 
 
@@ -12,9 +13,9 @@ namespace Fabrica.Services
 {
     public class FabricaService
     {
-        private List<Produto> produtos = new List<Produto>(); 
-        private List<MateriaPrima> materias = new List<MateriaPrima>(); //unificar essa list com a de produtos.
-        private List<PedidoProducao> pedidos = new List<PedidoProducao>();
+        public List<Produto> produtos = new List<Produto>(); 
+        public List<MateriaPrima> materias = new List<MateriaPrima>(); //unificar essa list com a de produtos.
+        public List<PedidoProducao> pedidos = new List<PedidoProducao>();
 
         public void Cadastros()
         {
@@ -38,7 +39,12 @@ namespace Fabrica.Services
                     Console.WriteLine("==== Cadastro de produto ====");
 
                     Console.Write("\nNome: ");
-                    string nome = Console.ReadLine() ?? "";
+                    if(int.TryParse(Console.ReadLine(), out int nomeProduto))
+
+
+                    /*string nome = Console.ReadLine() ?? "";
+
+
                     Produto? produtoEncontrado = produtos.FirstOrDefault(f => f.Nome == nome);
 
                     if (produtoEncontrado != null)
@@ -49,7 +55,7 @@ namespace Fabrica.Services
                     if (string.IsNullOrWhiteSpace(nome))
                     {
                         throw new ArgumentException("O campo não pode ser vazio. Tente novamente");
-                    }
+                    }*/
 
 
                     Console.Write("ID: ");
