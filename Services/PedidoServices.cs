@@ -32,8 +32,7 @@ namespace Pedido.Services
 
         public void MostrarProduto(int idProduto)
         {
-            var produtoEncontrado = fabricaService.produtos
-                .FirstOrDefault(p => p.ID == idProduto);
+            var produtoEncontrado = fabricaService.produtos.FirstOrDefault(p => p.ID == idProduto);
 
             if (produtoEncontrado == null)
             {
