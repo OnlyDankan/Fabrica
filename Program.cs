@@ -30,12 +30,12 @@ namespace Fabrica
             
 
             Console.WriteLine("\n5 - Criar receita de produção");
-            Console.WriteLine("9 - Criar pedido de produção");
-            Console.WriteLine("10 - Ver pedidos");
+            Console.WriteLine("6 - Criar pedido de produção");
+            Console.WriteLine("7 - Ver pedidos");
 
-            Console.WriteLine("11 - Verificar se pedido pode ser produzido");
-            Console.WriteLine("12 - Iniciar produção");
-            Console.WriteLine("13 - Finalizar produção");
+            Console.WriteLine("8 - Verificar se pedido pode ser produzido");
+            Console.WriteLine("9 - Iniciar produção");
+            Console.WriteLine("10 - Finalizar produção");
 
             Console.WriteLine("\n14 - Relatórios");
             
@@ -65,6 +65,9 @@ namespace Fabrica
 
                 case 5:
                     pedidoService.CriarReceita();
+                break;
+
+                case 6:
                 break;
 
                 case 0:
