@@ -44,5 +44,11 @@ namespace Pedido.Services
             Console.WriteLine($"ID: {produtoEncontrado.ID}");
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
         }
+
+        public void CriarPedidoProducao (int idProduto)
+        {
+            Console.WriteLine("=== Criação de pedido ====");
+            MostrarProduto(idProduto);
+        }
     }
 }
