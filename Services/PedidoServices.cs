@@ -12,7 +12,7 @@ namespace Pedido.Services
 
         public PedidoService(FabricaService fabricaService)
         {
-            this.fabricaService = fabricaService;
+            this.fabricaService = fabricaService; //um comando onde eu peço pro sistema pegar o valor do fabrica e guardar lá mesmo
         }
 
         public void CriarReceita()
