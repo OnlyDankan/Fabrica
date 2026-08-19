@@ -45,6 +45,22 @@ namespace Pedido.Services
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
         }
 
+        public void MostrarMateria(int idMateria)
+        {
+            var materiaEncontrada = fabricaService.materias.FirstOrDefault(m => m.ID == idMateria);
+
+            if (materiaEncontrada == null)
+            {
+                Console.WriteLine("Material não encontrado");
+                return;
+            }
+
+            Console.WriteLine("\n==== MATÉRIA SELECIONADA");
+            Console.WriteLine($"ID: {materiaEncontrada.ID}");
+            Console.WriteLine($"Nome: {materiaEncontrada.Nome}");
+            Console.WriteLine($"Quantidade: {materiaEncontrada.Quantidade}");
+         }
+
         public void CriarPedidoProducao (int idProduto)
         {
             
