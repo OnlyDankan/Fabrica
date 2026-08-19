@@ -47,7 +47,7 @@ namespace Pedido.Services
 
         public void CriarPedidoProducao (int idProduto)
         {
-            Console.WriteLine("=== Criação de pedido ====");
+            
             MostrarProduto(idProduto);
         }
     }
