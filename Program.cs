@@ -37,7 +37,7 @@ namespace Fabrica
             Console.WriteLine("9 - Iniciar produção");
             Console.WriteLine("10 - Finalizar produção");
 
-            Console.WriteLine("\n14 - Relatórios");
+            Console.WriteLine("\n11 - Relatórios");
             
             Console.WriteLine("\n0 - Sair");
             Console.Write("Escolha uma opção: ");
