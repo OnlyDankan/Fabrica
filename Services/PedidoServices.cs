@@ -39,7 +39,7 @@ namespace Pedido.Services
                 Console.WriteLine("Produto não encontrado.");
                 return;
             }
-
+                        
             Console.WriteLine("\n=== PRODUTO SELECIONADO ====");
             Console.WriteLine($"ID: {produtoEncontrado.ID}");
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
