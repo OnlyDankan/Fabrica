@@ -68,6 +68,7 @@ namespace Fabrica
                 break;
 
                 case 6:
+                    
                 break;
 
                 case 0:
