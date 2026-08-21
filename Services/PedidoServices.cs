@@ -61,5 +61,10 @@ namespace Pedido.Services
             Console.WriteLine($"Nome: {materiaEncontrada.Nome}");
             Console.WriteLine($"Quantidade: {materiaEncontrada.Quantidade}");
         }
+
+        public void CriarPedidoProducao()
+        {
+            
+        }
     }
 }
