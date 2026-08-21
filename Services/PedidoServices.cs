@@ -12,7 +12,7 @@ namespace Pedido.Services
 
         public PedidoService(FabricaService fabricaService)
         {
-            this.fabricaService = fabricaService; //um comando onde eu peço pro sistema pegar o valor do fabrica e guardar lá mesmo
+            this.fabricaService = fabricaService;
         }
 
         public void CriarReceita()
@@ -39,32 +39,27 @@ namespace Pedido.Services
                 Console.WriteLine("Produto não encontrado.");
                 return;
             }
-                        
+
             Console.WriteLine("\n=== PRODUTO SELECIONADO ====");
             Console.WriteLine($"ID: {produtoEncontrado.ID}");
             Console.WriteLine($"Nome: {produtoEncontrado.Nome}");
         }
 
+
         public void MostrarMateria(int idMateria)
         {
             var materiaEncontrada = fabricaService.materias.FirstOrDefault(m => m.ID == idMateria);
 
-            if (materiaEncontrada == null)
+            if(materiaEncontrada == null)
             {
-                Console.WriteLine("Material não encontrado");
+                Console.WriteLine("Produto não encontrado.");
                 return;
             }
 
-            Console.WriteLine("\n==== MATÉRIA SELECIONADA");
+            Console.WriteLine("\n=== MATERIA SELECIONADA ===");
             Console.WriteLine($"ID: {materiaEncontrada.ID}");
             Console.WriteLine($"Nome: {materiaEncontrada.Nome}");
             Console.WriteLine($"Quantidade: {materiaEncontrada.Quantidade}");
-         }
-
-        public void CriarPedidoProducao (int idProduto)
-        {
-            
-            MostrarProduto(idProduto);
         }
     }
 }
