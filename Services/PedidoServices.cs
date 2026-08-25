@@ -57,9 +57,14 @@ namespace Pedido.Services
             }
 
             Console.WriteLine("\n=== MATERIA SELECIONADA ===");
-            Console.WriteLine($"ID: {materiaEncontrada.ID}");
+            Console.WriteLine($"\nID: {materiaEncontrada.ID}");
             Console.WriteLine($"Nome: {materiaEncontrada.Nome}");
             Console.WriteLine($"Quantidade: {materiaEncontrada.Quantidade}");
+
+            Console.WriteLine($"{materiaEncontrada.Nome}");
+            Console.WriteLine("\n");
+
+
         }
 
         public void CriarPedidoProducao()
