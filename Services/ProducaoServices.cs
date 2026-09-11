@@ -55,7 +55,7 @@ namespace Fabrica.Services
 
 
                     Console.Write("ID: ");
-                    int id = int.Parse(Console.ReadLine() ?? "");
+                    var id = int.Parse(Console.ReadLine() ?? "");
                     Produto? produtoEncontrados = produtos.FirstOrDefault(f => f.ID == id);
 
                     if (produtoEncontrados != null)

@@ -71,7 +71,7 @@ namespace Pedido.Services
         public void CriarPedidoProducao()
         {
             
-           Console.WriteLine($"{}");
+           //Console.WriteLine($"{}");
         }
     }
 }
