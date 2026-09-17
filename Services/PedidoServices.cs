@@ -68,8 +68,8 @@ namespace Pedido.Services
 
         }
 
- public void CriarPedidoProducao()
-{
+    public void CriarPedidoProducao()
+    {
     Console.WriteLine("\n=== CRIAR PEDIDO DE PRODUÇÃO ===");
 
     if (!fabricaService.produtos.Any())
