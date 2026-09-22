@@ -155,7 +155,7 @@ namespace Pedido.Services
     var novoPedido = new PedidoProducao
     {
         ID = fabricaService.pedidos.Count + 1,
-        Produto = produtoSelecionado,
+        Nome = produtoSelecionado.Nome,
         Quantidade = quantidade,
         Prioridade = prioridade,
         Status = "Aguardando"
