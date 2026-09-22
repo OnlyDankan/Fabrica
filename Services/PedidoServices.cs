@@ -21,16 +21,23 @@ namespace Pedido.Services
 
             Console.Write("Digite o ID do produto: ");
 
+
             if (!int.TryParse(Console.ReadLine(), out int idProduto))
             {
                 Console.WriteLine("ID inválido.");
                 return;
             }
 
-            MostrarProduto(idProduto);
+            if (!int.TryParse(Console.ReadLine(), out int idMateria))
+            {
+                Console.WriteLine("ID inválido.");
+                return;
+            }
+
+            MostrarProduto(idProduto, idMateria);
         }
 
-        public void MostrarProduto(int idProduto)
+        public void MostrarProduto(int idProduto, int idMateria)
         {
             var produtoEncontrado = fabricaService.produtos.FirstOrDefault(p => p.ID == idProduto);
 
