@@ -23,7 +23,7 @@ namespace Fabrica
 
             Console.WriteLine("=== FABRICA ===");
 
-            Console.WriteLine("1 - Cadastrar produto");
+            Console.WriteLine("1 - Cadastrar item");
             Console.WriteLine("2 - Listagens");
             Console.WriteLine("3 - Atualizar");
             Console.WriteLine("4 - Remover itens");

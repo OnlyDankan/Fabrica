@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fabrica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a50c90977d589b1d9b4a9dfeb27d9e0ef14a6994")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+550f16e62b25966f331baf963a4301fbaf841b74")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fabrica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fabrica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
