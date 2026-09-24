@@ -68,7 +68,7 @@ namespace Fabrica
                 break;
 
                 case 6:
-                    
+                    pedidoService.CriarPedidoProducao();
                 break;
 
                 case 0:
